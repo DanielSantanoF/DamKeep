@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "d2b28d90-5db5-41da-ba36-19fa4a695de6",
+		"name": "DamKeep",
+		"description": "Collection for api rest from Proyect DamKeep at: https://github.com/DanielSantanoF/DamKeep by Daniel Santano Fernández",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwYjJlZTk0Ny02ZjcwLTRiYTktODc4OC1jMzBmMTllZDcyNmQiLCJleHAiOjE1ODk4OTM1MjIsImlhdCI6MTU4OTYzNDMyMiwicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.IVTiy4lsJ0xs8GQrr64jr_F9TRO6YJf4hD8wQEpHKZu7w7wFtP5lJGuIeFFVT_e_Ry5_-fu03oIUfasHstFkRw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/user/me",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"admin\",\n\t\"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"postman\",\n\t\"fullName\": \"PostManUser\",\n\t\"password\": \"123456\",\n\t\"password2\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send RefreshToken To Refresh Tokens",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2MjgwNDZmMS1kYzVmLTRjZjQtOGNkOS02MWViODA3MWY0MmYiLCJleHAiOjE1OTA1MDU5NjgsImlhdCI6MTU4OTY0MTk2OCwicmVmcmVzaCI6dHJ1ZX0.R8a2N5JWlQSzhQ9i1s-po47MRq3k1P6cA_0Wfr2CoizS_95DStP8s8Ly-FqWVvk8m0v-hUP4L1HxgfJNXt8kig",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/auth/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"auth",
+								"token"
+							]
+						},
+						"description": "In the authentication you need to send the REFRESH TOKEN to get the new token and the new Refresh Token"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "All my Notes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4N2ZmNDM0My1jNjY5LTQ2N2MtYmQwZi05MzI5N2Y3OTdiNjQiLCJleHAiOjE1ODk5MDA5MjMsImlhdCI6MTU4OTY0MTcyMywicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.4gssyKNqRODgW-BKg7pI7nb16-WhNgsllvUWI82UTbSmCrtYwopJBoX_JCNP8UQWysKAR4_6OBv5SAwX34tj4g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/note/personal",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"note",
+								"personal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Note By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4N2ZmNDM0My1jNjY5LTQ2N2MtYmQwZi05MzI5N2Y3OTdiNjQiLCJleHAiOjE1ODk5MDA5MjMsImlhdCI6MTU4OTY0MTcyMywicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.4gssyKNqRODgW-BKg7pI7nb16-WhNgsllvUWI82UTbSmCrtYwopJBoX_JCNP8UQWysKAR4_6OBv5SAwX34tj4g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/note/bcdbd188-2c6d-4bcd-9ac4-67de82c82e63",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"note",
+								"bcdbd188-2c6d-4bcd-9ac4-67de82c82e63"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post New Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzNWJjYjAyOS1jMGViLTRkNGEtYTljYi04NmE4YmZkYmNiYTkiLCJleHAiOjE1ODk5MDAxNDcsImlhdCI6MTU4OTY0MDk0NywicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.3Bfw68h7XB-5Txgm9zr1qdGeSKMbWgAKYLdJ1g5iiXha47Bzl6yi3CBtbpFf9qR68MhDEomSt0H69qhmovl0cA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"New Note\",\n\t\"content\": \"New note from Postman to test the endpoint of creating a new note\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/note/new",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"note",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzNWJjYjAyOS1jMGViLTRkNGEtYTljYi04NmE4YmZkYmNiYTkiLCJleHAiOjE1ODk5MDAxNDcsImlhdCI6MTU4OTY0MDk0NywicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.3Bfw68h7XB-5Txgm9zr1qdGeSKMbWgAKYLdJ1g5iiXha47Bzl6yi3CBtbpFf9qR68MhDEomSt0H69qhmovl0cA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edit Note\",\n\t\"content\": \"PUT to edit note from Postman to test the endpoint of editing a note\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/note/23850e93-f6df-4cdc-bf94-8d0b71e25a09",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"note",
+								"23850e93-f6df-4cdc-bf94-8d0b71e25a09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzNWJjYjAyOS1jMGViLTRkNGEtYTljYi04NmE4YmZkYmNiYTkiLCJleHAiOjE1ODk5MDAxNDcsImlhdCI6MTU4OTY0MDk0NywicmVmcmVzaCI6ZmFsc2UsImZ1bGxuYW1lIjoiYWRtaW5uYW1lRnVsbE5hbWUiLCJyb2xlcyI6IkFETUlOIn0.3Bfw68h7XB-5Txgm9zr1qdGeSKMbWgAKYLdJ1g5iiXha47Bzl6yi3CBtbpFf9qR68MhDEomSt0H69qhmovl0cA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/note/23850e93-f6df-4cdc-bf94-8d0b71e25a09",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"note",
+								"23850e93-f6df-4cdc-bf94-8d0b71e25a09"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

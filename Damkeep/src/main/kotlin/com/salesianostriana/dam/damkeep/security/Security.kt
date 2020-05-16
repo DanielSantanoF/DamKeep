@@ -68,7 +68,7 @@ class WebSecurityConfiguration(
                 .and()
                 .authorizeRequests()
                 .antMatchers( "/h2-console/**").permitAll()
-                .antMatchers(POST, "/auth/login", "/auth/token", "/user/").permitAll()
+                .antMatchers(POST, "/auth/login", "/auth/token", "/user/register").permitAll()
                 .antMatchers(GET, "/notes/**").hasRole("USER")
                 .antMatchers(POST, "/notes/**").hasRole("USER")
                 .antMatchers(PUT, "/notes/**").hasRole("USER")

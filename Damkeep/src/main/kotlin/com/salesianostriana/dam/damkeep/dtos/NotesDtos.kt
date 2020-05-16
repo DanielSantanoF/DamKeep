@@ -17,12 +17,10 @@ fun Note.toNoteDTO() = NoteDto(title, content, createdAt, lastUpdate, id)
 
 data class CreateNoteDTO(
         var title: String,
-        var content: String,
-        var user: User
+        var content: String
 )
 
 data class UpdateNoteDTO(
         var title: String,
-        var content: String,
-        var id: UUID
+        var content: String
 )

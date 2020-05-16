@@ -9,6 +9,6 @@ import java.util.*
 interface NoteRepository : JpaRepository<Note, UUID> {
 
     @Query("select n from Note n where n.user = :user")
-    fun findAllNoteByUser() : List<Note>
+    fun findAllNoteByUser(user : User) : List<Note>
 
 }
