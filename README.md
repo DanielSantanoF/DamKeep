@@ -4,7 +4,7 @@ Proyecto de gestión de notas de texto personales con api y app de andrid entera
 #### El proyecto cuenta con 2 partes:
 
 * ApiRest: En este caso se ha realizado en Spring con IntelliJ IDEA, [Ver](https://github.com/DanielSantanoF/DamKeep/tree/master/Damkeep)
-* Aplicación de android: en Kotlin, [Ver]()
+* Aplicación de android: en Kotlin, [Ver](https://github.com/DanielSantanoF/DamKeep/tree/master/DamkeepApp)
 
 ***
 
